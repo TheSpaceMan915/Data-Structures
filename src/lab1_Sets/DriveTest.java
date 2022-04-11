@@ -1,4 +1,4 @@
-package lab1;
+package lab1_Sets;
 //В первом задании второй лабораторной читать файлы побитово
 
 import java.util.ArrayList;

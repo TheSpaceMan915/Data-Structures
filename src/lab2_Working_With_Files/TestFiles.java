@@ -1,4 +1,4 @@
-package lab2;
+package lab2_Working_With_Files;
 import java.io.*;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
@@ -45,12 +45,8 @@ public class TestFiles {
             String temp = "";
             int value = 0;
 
-            while (temp != null)
+            while ((temp = fout.readLine()) != null)
             {
-                temp = fout.readLine();
-
-                if (temp == null)
-                {break;}
 
                 value = Integer.parseInt(temp);
                 if (value < 0)
@@ -131,6 +127,8 @@ public class TestFiles {
             {System.out.println("There is nothing in the line number " + numb);}
             else
             {System.out.println(temp_line);}
+
+            fout.close();
         }
         catch (IOException exep)
         {
@@ -172,6 +170,7 @@ public class TestFiles {
                     arr.add(new Sub_str(line_counter,substr_ind));
                 }
             }
+            fout.close();
         }
         catch (IOException exep)
         {
@@ -239,6 +238,7 @@ public class TestFiles {
                 for (var x: sentence)
                 {set_of_words.add(x);}
             }
+            fout.close();
         }
         catch (IOException exep)
         {
@@ -300,6 +300,7 @@ public class TestFiles {
             {
                 System.out.println("The word: "+ temp.m_word + " occurs " + temp.m_counter + " times");
             }
+            fout.close();
         }
         catch (IOException exep)
         {
@@ -319,7 +320,6 @@ public class TestFiles {
             FileWriter in_stream = new FileWriter(in_file_name);
             BufferedWriter fin = new BufferedWriter(in_stream);
             String temp_line = "";
-            String temp_line2 = "";
             char arr[];
 
             while ((temp_line = fout.readLine()) != null)
@@ -335,9 +335,10 @@ public class TestFiles {
                         }
                     }
                 }
-                temp_line2 = arr.toString();
-                fin.write(temp_line2);
+                temp_line = String.valueOf(arr);
+                fin.write(temp_line);
                 fin.newLine();
+                //System.out.println(temp_line);
             }
             fout.close();
             fin.close();
@@ -347,19 +348,17 @@ public class TestFiles {
             System.out.println("There's been a problem");
             exep.printStackTrace();
         }
-
-
     }
 
     public static void main(String[] args)
     {
         File path = new File("C:\\Users\\nikit\\IdeaProjects\\Data Structures\\src\\lab2\\OutputData.txt");
         File path2 = new File("C:\\Users\\nikit\\IdeaProjects\\Data Structures\\src\\lab2\\Task2.txt");
-        //FillFile(path.getPath());
-        //ReadFile(path.getPath());
+        FillFile(path.getPath());
+        ReadFile(path.getPath());
 
-       // WriteCharacter(path2.getPath());
-       // ReadFile2("C:\\Users\\nikit\\IdeaProjects\\Data Structures\\src\\lab2\\Task3.txt");
+       WriteCharacter(path2.getPath());
+       ReadFile2("C:\\Users\\nikit\\IdeaProjects\\Data Structures\\src\\lab2\\Task3.txt");
 
         TestFiles obj = new TestFiles();
         String s = "hello";
