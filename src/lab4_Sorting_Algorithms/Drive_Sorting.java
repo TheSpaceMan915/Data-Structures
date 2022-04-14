@@ -44,6 +44,18 @@ public class Drive_Sorting {
         System.out.println();
     }
 
+    static void ShuffleArray(Comparable[] ar)
+    {
+        for (int i = ar.length - 1; i > 0; i--)
+        {
+            int index = ThreadLocalRandom.current().nextInt(i + 1);
+            // Simple swap
+            Comparable a = ar[index];
+            ar[index] = ar[i];
+            ar[i] = a;
+        }
+    }
+
     public static Comparable[] CreateArray(int arr_size)
     {
 
@@ -100,7 +112,11 @@ public class Drive_Sorting {
     {
         m_start_time = System.nanoTime();
         ZeroAllCounters();
+
         qs(arr, 0, arr.length - 1);
+
+        m_end_time = System.nanoTime();
+        m_duration = (double) (m_end_time - m_start_time)/1000000000;   //to get time in seconds
     }
 
     public static void qs(Comparable[] arr, int l, int r) {
@@ -149,6 +165,9 @@ public class Drive_Sorting {
             }
             exch(arr,i,min_ind);
         }
+
+        m_end_time = System.nanoTime();
+        m_duration = (double) (m_end_time - m_start_time)/1000000000;   //to get time in seconds
     }
 
     public static void InsertionSort(Comparable[] arr)
@@ -168,13 +187,15 @@ public class Drive_Sorting {
                 }
             }
         }
+
+        m_end_time = System.nanoTime();
+        m_duration = (double) (m_end_time - m_start_time)/1000000000;   //to get time in seconds
     }
 
 
     public static void main(String[] args) {
 
-        System.out.println("№1");
-        System.out.println("Bubble Sort");
+        System.out.println("BubbleSort");
         System.out.println("----------------------------------------------------------------------------------------------------------------------------------------");
         System.out.printf("%25s %25s %25s %25s %25s","Array size","Duration, seconds","Iteration number","Swap number","Comparison number");
         System.out.println();
@@ -211,6 +232,122 @@ public class Drive_Sorting {
         System.out.printf("%25s %25s %25s %25s %25s",arr_10000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
         System.out.println();
 
+        //Test the next sorting algorithm
+        ShuffleArray(arr_20);
+        ShuffleArray(arr_500);
+        ShuffleArray(arr_1000);
+        ShuffleArray(arr_3000);
+        ShuffleArray(arr_5000);
+        ShuffleArray(arr_10000);
 
+        System.out.println("SelectionSort");
+        System.out.println("----------------------------------------------------------------------------------------------------------------------------------------");
+        System.out.printf("%25s %25s %25s %25s %25s","Array size","Duration, seconds","Iteration number","Swap number","Comparison number");
+        System.out.println();
+        System.out.println("----------------------------------------------------------------------------------------------------------------------------------------");
+
+        SelectionSort(arr_20);
+        System.out.printf("%25s %25s %25s %25s %25s",arr_20.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number);
+        System.out.println();
+
+        SelectionSort(arr_500);
+        System.out.printf("%25s %25s %25s %25s %25s",arr_500.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.println();
+
+        SelectionSort(arr_1000);
+        System.out.printf("%25s %25s %25s %25s %25s",arr_1000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.println();
+
+        SelectionSort(arr_3000);
+        System.out.printf("%25s %25s %25s %25s %25s",arr_3000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.println();
+
+        SelectionSort(arr_5000);
+        System.out.printf("%25s %25s %25s %25s %25s",arr_5000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.println();
+
+        SelectionSort(arr_10000);
+        System.out.printf("%25s %25s %25s %25s %25s",arr_10000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.println();
+
+        //Test the next sorting algorithm
+        ShuffleArray(arr_20);
+        ShuffleArray(arr_500);
+        ShuffleArray(arr_1000);
+        ShuffleArray(arr_3000);
+        ShuffleArray(arr_5000);
+        ShuffleArray(arr_10000);
+
+        System.out.println("InsertionSort");
+        System.out.println("----------------------------------------------------------------------------------------------------------------------------------------");
+        System.out.printf("%25s %25s %25s %25s %25s","Array size","Duration, seconds","Iteration number","Swap number","Comparison number");
+        System.out.println();
+        System.out.println("----------------------------------------------------------------------------------------------------------------------------------------");
+
+        InsertionSort(arr_20);
+        System.out.printf("%25s %25s %25s %25s %25s",arr_20.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number);
+        System.out.println();
+
+        InsertionSort(arr_500);
+        System.out.printf("%25s %25s %25s %25s %25s",arr_500.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.println();
+
+        InsertionSort(arr_1000);
+        System.out.printf("%25s %25s %25s %25s %25s",arr_1000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.println();
+
+        InsertionSort(arr_3000);
+        System.out.printf("%25s %25s %25s %25s %25s",arr_3000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.println();
+
+        InsertionSort(arr_5000);
+        System.out.printf("%25s %25s %25s %25s %25s",arr_5000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.println();
+
+        InsertionSort(arr_10000);
+        System.out.printf("%25s %25s %25s %25s %25s",arr_10000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.println();
+
+        //_______________________________________
+        //Test the next sorting algorithm
+        ShuffleArray(arr_20);
+        ShuffleArray(arr_500);
+        ShuffleArray(arr_1000);
+        ShuffleArray(arr_3000);
+        ShuffleArray(arr_5000);
+        ShuffleArray(arr_10000);
+
+        System.out.println("QuickSort");
+        System.out.println("----------------------------------------------------------------------------------------------------------------------------------------");
+        System.out.printf("%25s %25s %25s %25s %25s","Array size","Duration, seconds","Iteration number","Swap number","Comparison number");
+        System.out.println();
+        System.out.println("----------------------------------------------------------------------------------------------------------------------------------------");
+
+        quicksort(arr_20);
+        System.out.printf("%25s %25s %25s %25s %25s",arr_20.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number);
+        System.out.println();
+
+        quicksort(arr_500);
+        System.out.printf("%25s %25s %25s %25s %25s",arr_500.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.println();
+
+        quicksort(arr_1000);
+        System.out.printf("%25s %25s %25s %25s %25s",arr_1000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.println();
+
+        quicksort(arr_3000);
+        System.out.printf("%25s %25s %25s %25s %25s",arr_3000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.println();
+
+        quicksort(arr_5000);
+        System.out.printf("%25s %25s %25s %25s %25s",arr_5000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.println();
+
+        quicksort(arr_10000);
+        System.out.printf("%25s %25s %25s %25s %25s",arr_10000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.println();
+
+        //if we've got 20 - 3000 elements, we should use straight sorting algorithms
+        //if we've got 5000 elements or more , we should use QuickSort
     }
 }
