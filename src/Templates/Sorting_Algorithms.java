@@ -1,4 +1,4 @@
-package Test;
+package Templates;
 
 public class Sorting_Algorithms {
 

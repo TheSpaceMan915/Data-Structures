@@ -209,27 +209,27 @@ public class Drive_Sorting {
         Comparable[] arr_10000 = CreateArray(10000);
 
         BubbleSort(arr_20);
-        System.out.printf("%25s %25s %25s %25s %25s",arr_20.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number);
+        System.out.printf("%25s %25f %25s %25s %25s",arr_20.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number);
         System.out.println();
 
         BubbleSort(arr_500);
-        System.out.printf("%25s %25s %25s %25s %25s",arr_500.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.printf("%25s %25f %25s %25s %25s",arr_500.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
         System.out.println();
 
         BubbleSort(arr_1000);
-        System.out.printf("%25s %25s %25s %25s %25s",arr_1000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.printf("%25s %25f %25s %25s %25s",arr_1000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
         System.out.println();
 
         BubbleSort(arr_3000);
-        System.out.printf("%25s %25s %25s %25s %25s",arr_3000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.printf("%25s %25f %25s %25s %25s",arr_3000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
         System.out.println();
 
         BubbleSort(arr_5000);
-        System.out.printf("%25s %25s %25s %25s %25s",arr_5000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.printf("%25s %25f %25s %25s %25s",arr_5000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
         System.out.println();
 
         BubbleSort(arr_10000);
-        System.out.printf("%25s %25s %25s %25s %25s",arr_10000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.printf("%25s %25f %25s %25s %25s",arr_10000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
         System.out.println();
 
         //Test the next sorting algorithm
@@ -247,27 +247,27 @@ public class Drive_Sorting {
         System.out.println("----------------------------------------------------------------------------------------------------------------------------------------");
 
         SelectionSort(arr_20);
-        System.out.printf("%25s %25s %25s %25s %25s",arr_20.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number);
+        System.out.printf("%25s %25f %25s %25s %25s",arr_20.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number);
         System.out.println();
 
         SelectionSort(arr_500);
-        System.out.printf("%25s %25s %25s %25s %25s",arr_500.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.printf("%25s %25f %25s %25s %25s",arr_500.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
         System.out.println();
 
         SelectionSort(arr_1000);
-        System.out.printf("%25s %25s %25s %25s %25s",arr_1000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.printf("%25s %25f %25s %25s %25s",arr_1000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
         System.out.println();
 
         SelectionSort(arr_3000);
-        System.out.printf("%25s %25s %25s %25s %25s",arr_3000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.printf("%25s %25f %25s %25s %25s",arr_3000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
         System.out.println();
 
         SelectionSort(arr_5000);
-        System.out.printf("%25s %25s %25s %25s %25s",arr_5000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.printf("%25s %25f %25s %25s %25s",arr_5000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
         System.out.println();
 
         SelectionSort(arr_10000);
-        System.out.printf("%25s %25s %25s %25s %25s",arr_10000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.printf("%25s %25f %25s %25s %25s",arr_10000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
         System.out.println();
 
         //Test the next sorting algorithm
@@ -285,27 +285,27 @@ public class Drive_Sorting {
         System.out.println("----------------------------------------------------------------------------------------------------------------------------------------");
 
         InsertionSort(arr_20);
-        System.out.printf("%25s %25s %25s %25s %25s",arr_20.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number);
+        System.out.printf("%25s %25f %25s %25s %25s",arr_20.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number);
         System.out.println();
 
         InsertionSort(arr_500);
-        System.out.printf("%25s %25s %25s %25s %25s",arr_500.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.printf("%25s %25f %25s %25s %25s",arr_500.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
         System.out.println();
 
         InsertionSort(arr_1000);
-        System.out.printf("%25s %25s %25s %25s %25s",arr_1000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.printf("%25s %25f %25s %25s %25s",arr_1000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
         System.out.println();
 
         InsertionSort(arr_3000);
-        System.out.printf("%25s %25s %25s %25s %25s",arr_3000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.printf("%25s %25f %25s %25s %25s",arr_3000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
         System.out.println();
 
         InsertionSort(arr_5000);
-        System.out.printf("%25s %25s %25s %25s %25s",arr_5000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.printf("%25s %25f %25s %25s %25s",arr_5000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
         System.out.println();
 
         InsertionSort(arr_10000);
-        System.out.printf("%25s %25s %25s %25s %25s",arr_10000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.printf("%25s %25f %25s %25s %25s",arr_10000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
         System.out.println();
 
         //_______________________________________
@@ -324,27 +324,27 @@ public class Drive_Sorting {
         System.out.println("----------------------------------------------------------------------------------------------------------------------------------------");
 
         quicksort(arr_20);
-        System.out.printf("%25s %25s %25s %25s %25s",arr_20.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number);
+        System.out.printf("%25s %25f %25s %25s %25s",arr_20.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number);
         System.out.println();
 
         quicksort(arr_500);
-        System.out.printf("%25s %25s %25s %25s %25s",arr_500.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.printf("%25s %25f %25s %25s %25s",arr_500.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
         System.out.println();
 
         quicksort(arr_1000);
-        System.out.printf("%25s %25s %25s %25s %25s",arr_1000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.printf("%25s %25f %25s %25s %25s",arr_1000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
         System.out.println();
 
         quicksort(arr_3000);
-        System.out.printf("%25s %25s %25s %25s %25s",arr_3000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.printf("%25s %25f %25s %25s %25s",arr_3000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
         System.out.println();
 
         quicksort(arr_5000);
-        System.out.printf("%25s %25s %25s %25s %25s",arr_5000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.printf("%25s %25f %25s %25s %25s",arr_5000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
         System.out.println();
 
         quicksort(arr_10000);
-        System.out.printf("%25s %25s %25s %25s %25s",arr_10000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
+        System.out.printf("%25s %25f %25s %25s %25s",arr_10000.length,m_duration,m_iteration_number,m_swap_number,m_comparison_number );
         System.out.println();
 
         //if we've got 20 - 3000 elements, we should use straight sorting algorithms
