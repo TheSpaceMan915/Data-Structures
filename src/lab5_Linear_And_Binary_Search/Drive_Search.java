@@ -130,6 +130,37 @@ public class Drive_Search {
         m_duration = (double) (m_end_time - m_start_time)/1000000000;
         return elem_ind;
     }
+
+    public static int BarrierSearch(Comparable[] arr,Comparable elem)
+    {
+        m_start_time = System.nanoTime();
+        ZeroCounters();
+
+        Comparable temp = arr[arr.length - 1];          ///save the last element of the array
+        arr[arr.length - 1] = elem;                     //and set the barrier instead of it
+
+        int i = 1;
+        while (arr[i - 1] != elem)
+        {
+            m_comparison_number++;
+            i++;
+        }
+
+        arr[i-1] = temp;        //return the last element to the end of the array
+
+        if (i == arr.length)
+        {
+            m_comparison_number++;
+            if (temp == elem)               //if the element that we're looking for is the last one
+            { return arr.length - 1; }
+            else
+                return -1;
+        }
+
+        m_end_time = System.nanoTime();
+        m_duration = (double) (m_end_time - m_start_time)/1000000000;
+        return i-1;
+    }
     public static void main(String[] args) {
 
         System.out.println("№1______________________________________________________________________________");
@@ -273,6 +304,38 @@ public class Drive_Search {
 
         int ind_elem25 = LinearSearch(test_elem,arr1_10000);
         System.out.printf("%25s %25f %25s",arr1_10000.length,m_duration,m_iteration_number);
+        System.out.println();
+
+      /*  Comparable test_arr[] = {5,4,6,7};
+        int test_barr_search = BarrierSearch(test_arr,6);
+        System.out.println(test_barr_search);*/
+
+        System.out.println("№3______________________________________________________________________________");
+
+        System.out.println("Barrier search in an unsorted array");
+        System.out.println("----------------------------------------------------------------------------------------------------------------------------------------");
+        System.out.printf("%25s %25s %25s","Array size","Duration, seconds","Comparison number");
+        System.out.println();
+        System.out.println("----------------------------------------------------------------------------------------------------------------------------------------");
+
+        int ind_elem26 = BarrierSearch(arr2_100,11);
+        System.out.printf("%25s %25f %25s",arr2_100.length,m_duration,m_comparison_number);
+        System.out.println();
+
+        int ind_elem27 = BarrierSearch(arr2_500,67);
+        System.out.printf("%25s %25f %25s",arr2_500.length,m_duration,m_comparison_number);
+        System.out.println();
+
+        int ind_elem28 = BarrierSearch(arr2_1000,87);
+        System.out.printf("%25s %25f %25s",arr2_1000.length,m_duration,m_comparison_number);
+        System.out.println();
+
+        int ind_elem29 = BarrierSearch(arr2_3000,34);
+        System.out.printf("%25s %25f %25s",arr2_3000.length,m_duration,m_comparison_number);
+        System.out.println();
+
+        int ind_elem30 = BarrierSearch(arr2_10000,9);
+        System.out.printf("%25s %25f %25s",arr2_10000.length,m_duration,m_comparison_number);
         System.out.println();
     }
 
