@@ -1,8 +1,5 @@
 package lab6_Stack;
 
-//linked stack
-//another version of stack should be with a static array
-//Count elements and insert elements in the end of the array   arr[n+1] = elem
 public class Test_Linked_Stack {
 
     private Node m_first;

@@ -352,17 +352,17 @@ public class TestFiles {
 
     public static void main(String[] args)
     {
-        File path = new File("C:\\Users\\nikit\\IdeaProjects\\Data Structures\\src\\lab2\\OutputData.txt");
-        File path2 = new File("C:\\Users\\nikit\\IdeaProjects\\Data Structures\\src\\lab2\\Task2.txt");
+        File path = new File("C:\\Users\\nikit\\IdeaProjects\\Data Structures\\src\\lab2_Working_With_Files\\OutputData.txt");
+        File path2 = new File("C:\\Users\\nikit\\IdeaProjects\\Data Structures\\src\\lab2_Working_With_Files\\Task2.txt");
         FillFile(path.getPath());
         ReadFile(path.getPath());
 
        WriteCharacter(path2.getPath());
-       ReadFile2("C:\\Users\\nikit\\IdeaProjects\\Data Structures\\src\\lab2\\Task3.txt");
+       ReadFile2("C:\\Users\\nikit\\IdeaProjects\\Data Structures\\src\\lab2_Working_With_Files\\Task3.txt");
 
         TestFiles obj = new TestFiles();
         String s = "hello";
-        File path3 = new File("C:\\Users\\nikit\\IdeaProjects\\Data Structures\\src\\lab2\\Task4.txt");
+        File path3 = new File("C:\\Users\\nikit\\IdeaProjects\\Data Structures\\src\\lab2_Working_With_Files\\Task4.txt");
         ArrayList<Sub_str> arr_list = obj.FindSubstring(s,path3.getPath());
 
         for (int i = 0;i < arr_list.size();i++)
@@ -370,8 +370,8 @@ public class TestFiles {
             System.out.println("The substring is found on the line " + arr_list.get(i).m_line_numb +" starting with index " + arr_list.get(i).m_ind);
         }
 
-        File path4 = new File("C:\\Users\\nikit\\IdeaProjects\\Data Structures\\src\\lab2\\Task5.txt");
-        File path5 = new File("C:\\Users\\nikit\\IdeaProjects\\Data Structures\\src\\lab2\\WithoutPunctuation.txt");
+        File path4 = new File("C:\\Users\\nikit\\IdeaProjects\\Data Structures\\src\\lab2_Working_With_Files\\Task5.txt");
+        File path5 = new File("C:\\Users\\nikit\\IdeaProjects\\Data Structures\\src\\lab2_Working_With_Files\\WithoutPunctuation.txt");
         int unique_words = LookForUniqueWords(path4.getPath());
         System.out.println("There are " + unique_words + " unique words in the file");
 

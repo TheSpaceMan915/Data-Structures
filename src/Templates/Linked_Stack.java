@@ -16,12 +16,12 @@ public class Linked_Stack {
 
     public void push(Comparable elem)
     {
-        Node old_first_elem = m_first;      //save the old first
+        Node old_first_node = m_first;      //save the old first
 
         m_first = new Node();               //create a new pointer
 
         m_first.item = elem;
-        m_first.next = old_first_elem;            //connect the new first and the old one
+        m_first.next = old_first_node;            //connect the new first and the old one
         m_size++;
     }
 
