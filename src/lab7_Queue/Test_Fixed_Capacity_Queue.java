@@ -46,19 +46,33 @@ public class Test_Fixed_Capacity_Queue {
 
     public void PrintQueue()
     {
-        
+        int arr_size = m_tail - m_head;
+        Comparable[] temp_arr = new Comparable[arr_size];
+        Comparable temp;
+
+        for (int i = 0; i < arr_size; i++)
+        {
+            temp = remove();
+            System.out.println(temp);
+            temp_arr[i] = temp;
+        }
+
+        for (Comparable value : temp_arr)
+        { add(value); }
     }
 
     public static void main(String[] args) {
 
-        Test_Fixed_Capacity_Queue queue = new Test_Fixed_Capacity_Queue(2);
+        Test_Fixed_Capacity_Queue queue = new Test_Fixed_Capacity_Queue(6);
 
         queue.add(2);
         queue.add(1);
-        Comparable elem = queue.remove();
-        Comparable elem2 = queue.remove();
+        queue.add(5);
+        queue.add(6);
+
+        queue.PrintQueue();
+        queue.PrintQueue();
         queue.remove();
 
-        System.out.println(elem);
     }
 }
