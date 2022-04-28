@@ -23,7 +23,7 @@ public class Fixed_Capacity_Queue {
         {                                       //if the queue is bigger than its size
             m_head = 0;                         //zero head and tail and start adding elements
             m_tail = 0;                         //to the beginning as if the queue is empty
-            m_arr[m_tail] = value;
+            m_arr[m_tail++] = value;
         }
     }
 

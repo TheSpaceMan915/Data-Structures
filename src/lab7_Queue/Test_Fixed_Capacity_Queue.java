@@ -23,7 +23,7 @@ public class Test_Fixed_Capacity_Queue {
         {                                       //if the queue is bigger than its size
             m_head = 0;                         //zero head and tail and start adding elements
             m_tail = 0;                         //to the beginning as if the queue is empty
-            m_arr[m_tail] = value;
+            m_arr[m_tail++] = value;
         }
     }
 
@@ -50,6 +50,7 @@ public class Test_Fixed_Capacity_Queue {
         Comparable[] temp_arr = new Comparable[arr_size];
         Comparable temp;
 
+        System.out.println("Here is your queue:");
         for (int i = 0; i < arr_size; i++)
         {
             temp = remove();
@@ -63,16 +64,13 @@ public class Test_Fixed_Capacity_Queue {
 
     public static void main(String[] args) {
 
-        Test_Fixed_Capacity_Queue queue = new Test_Fixed_Capacity_Queue(6);
+        Test_Fixed_Capacity_Queue queue = new Test_Fixed_Capacity_Queue(10);
 
         queue.add(2);
         queue.add(1);
-        queue.add(5);
-        queue.add(6);
-
-        queue.PrintQueue();
-        queue.PrintQueue();
-        queue.remove();
-
+       //queue.PrintQueue();
+       queue.add(5);
+       queue.add(54);
+       queue.PrintQueue();
     }
 }
