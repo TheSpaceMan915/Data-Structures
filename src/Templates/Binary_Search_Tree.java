@@ -100,22 +100,37 @@ public class Binary_Search_Tree<Key extends Comparable<Key>,Item> {
             if (node_obj.m_left == null)
             { return null; }
 
-            Node temp = node_obj;
-            node_obj = min(temp.m_right);
-            node_obj.m_right = deleteMin(temp.m_right);
-            node_obj.m_left = temp.m_left;
+            Node temp = node_obj;                               //save the position of deleting node
+            node_obj = min(temp.m_right);                       //find the node X containing the min key
+            node_obj.m_right = deleteMin(temp.m_right);         //make the node X.right point to the subtree with larger keys
+            node_obj.m_left = temp.m_left;                      //make the node X.left point to the subtree with lesser keys
         }
-        return node_obj;
+        return node_obj;                                        //reset the root
+    }
+
+    public void print() { print(m_root); }
+
+    private void print(Node node)
+    {
+        if (node == null)
+        { return; }
+
+        System.out.printf("%s ",node.m_item + "\t");
+        print(node.m_left);
+        print(node.m_right);
     }
 
     public static void main(String[] args) {
 
         Binary_Search_Tree<Integer,String> tree_obj = new Binary_Search_Tree<>();
 
-        tree_obj.add(10,"Hello");
-        tree_obj.add(11,"How");
-        tree_obj.add(9,"Are");
-        tree_obj.delete(10);
-        tree_obj.get(9);
+        tree_obj.add(50,"Hello");
+        tree_obj.add(40,"How");
+        tree_obj.add(38,"Are");
+        tree_obj.add(41,"You");
+        tree_obj.add(60,"Doing");
+        tree_obj.delete(41);
+
+        tree_obj.print();
     }
     }
