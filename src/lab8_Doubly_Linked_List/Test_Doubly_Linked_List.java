@@ -1,6 +1,6 @@
-package Templates;
+package lab8_Doubly_Linked_List;
 
-public class Doubly_Linked_List<Item> {
+public class Test_Doubly_Linked_List<Item> {
 
     private Node m_head;
 
@@ -103,7 +103,7 @@ public class Doubly_Linked_List<Item> {
 
     public static void main(String[] args) {
 
-        Doubly_Linked_List<Integer> list_obj = new Doubly_Linked_List<>();
+        Test_Doubly_Linked_List<Integer> list_obj = new Test_Doubly_Linked_List<>();
 
         list_obj.addItemAtTheFront(32);
         list_obj.addItemAtTheFront(54);
