@@ -1,15 +1,15 @@
-package Templates;
+package Algorithms_The_Book.Priority_Queues;
 
-public class Max_Binary_Heap {
+public class MaxBinaryHeap {
     //finish HeapSort
 
     private Comparable[] m_arr;
     private int m_size = 0;
 
-    public Max_Binary_Heap(int size)
+    public MaxBinaryHeap(int size)
     { m_arr = new Comparable[size + 1]; }
 
-    public Max_Binary_Heap(Comparable[] arr,int size)
+    public MaxBinaryHeap(Comparable[] arr, int size)
     {
         m_arr = new Comparable[size + 1];
 
@@ -79,7 +79,7 @@ public class Max_Binary_Heap {
     public static void main(String[] args) {
 
         Comparable[] test_arr1 = {18,9,12,23,17,14,32};
-        Max_Binary_Heap heap = new Max_Binary_Heap(30);
+        MaxBinaryHeap heap = new MaxBinaryHeap(30);
 
         for (Comparable val : test_arr1)
         { heap.insert(val);}

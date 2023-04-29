@@ -1,4 +1,4 @@
-package Templates;
+package Algorithms_The_Book;
 
 public class Fixed_Capacity_Stack {
 

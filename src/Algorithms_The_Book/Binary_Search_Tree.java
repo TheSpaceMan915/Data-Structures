@@ -1,4 +1,4 @@
-package Templates;
+package Algorithms_The_Book;
 
 public class Binary_Search_Tree<Key extends Comparable<Key>,Item> {
 
@@ -129,8 +129,10 @@ public class Binary_Search_Tree<Key extends Comparable<Key>,Item> {
         tree_obj.add(38,"Are");
         tree_obj.add(41,"You");
         tree_obj.add(60,"Doing");
-        tree_obj.delete(41);
 
+        tree_obj.print();
+        System.out.println();
+        tree_obj.delete(41);
         tree_obj.print();
     }
     }

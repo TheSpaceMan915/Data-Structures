@@ -1,4 +1,4 @@
-package Templates;
+package Algorithms_The_Book;
 
 public class Sorting_Algorithms {
 
@@ -186,22 +186,23 @@ public class Sorting_Algorithms {
     }
 
     //HeapSort_______________________________________
-    private static boolean ElemLess(Comparable[] arr,int i1, int i2)
+    private static boolean ElemLess(Comparable[] arr,int j, int k)
     {
-        int ind1 = i1 - 1;          //decrement because an array starts not from 1 index (like a heap)
-        int ind2 = i2 - 1;          //but from 0 index
+        int k1 = j-1;
+        int k2 = k-1;
 
-        return arr[ind1].compareTo(arr[ind2]) < 0;
+        return arr[k1].compareTo(arr[k2]) < 0;
+        //decrement because an array starts not from 1 index (like a heap) but from 0 index
     }
 
     private static void ElemExch(Comparable arr[],int i1,int i2)
     {
-        int ind1 = i1 - 1;
-        int ind2 = i2 - 1;
+        int k1 = i1-1;
+        int k2 = i2-1;
 
-        Comparable temp = arr[ind1];
-        arr[ind1] = arr[ind2];
-        arr[ind2] = temp;
+        Comparable temp = arr[k1];
+        arr[k1] = arr[k2];
+        arr[k2] = temp;
     }
 
     public static void sink(Comparable arr[],int k,int arr_size)
@@ -209,11 +210,9 @@ public class Sorting_Algorithms {
         while (2*k <= arr_size)
         {
             int j = 2*k;
-            if (ElemLess(arr,j,j+1) && j < arr_size)
-            { j++; }
-            if (!ElemLess(arr,k,j))
-            { break; }
-
+            if (j < arr_size && (ElemLess(arr,j,j+1))) j++;     //choose the biggest child node
+            if (!ElemLess(arr,k,j)) break;                         //if the child more than its parent,
+                                                                    //move on to the next parent
             ElemExch(arr,k,j);
             k = j;
         }
@@ -224,25 +223,28 @@ public class Sorting_Algorithms {
         for (int i = n/2; i >= 1; i--)
         { sink(arr,i,n); }
 
-        while (n > 1)
+        int k = n;
+        while (k > 1)
         {
-            ElemExch(arr,1,n--);
-            sink(arr,1,n);
+            ElemExch(arr,1,k--);
+            sink(arr,1,k);
         }
     }
     //_______________________________________
 
 
+
+
     public static void main(String[] args) {
 
        int[] numb_arr = {9,8,10,4,5,6,7};
-       Comparable[] numb_arr2 = {-3,20,-10,24,5,-7,4,6,7};
+       Comparable[] numb_arr2 = {12,11,20,9,8,6,7};
 
 
        long start_time1 = System.nanoTime();
         HeapSort(numb_arr2);
         long end_time1 = System.nanoTime();
-        System.out.println(end_time1 - start_time1);
+        //System.out.println(end_time1 - start_time1);
 
 
         //int[] sorted_arr = BubbleSort(numb_arr);

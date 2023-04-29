@@ -1,4 +1,4 @@
-package Templates;
+package Algorithms_The_Book;
 
 public class Doubly_Linked_List<Item> {
 
