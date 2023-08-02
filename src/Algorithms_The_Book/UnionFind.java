@@ -17,6 +17,7 @@ public class UnionFind {
 
     public void union(int i, int j)
     {
+        int elem = 0;
         int i_elem = m_arr_id[i];
         int j_elem = m_arr_id[j];
 
