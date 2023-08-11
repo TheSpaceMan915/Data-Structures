@@ -4,6 +4,7 @@ public class Linked_Stack {
 
     private Node m_first;
     private int m_size = 0;
+    private int number = 0;
 
     private class Node {
        private Comparable item;
