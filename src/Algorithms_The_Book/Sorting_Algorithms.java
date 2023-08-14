@@ -22,10 +22,6 @@ public class Sorting_Algorithms {
         }
         System.out.println();
     }
-
-    public static void tempSort(Comparable[] arr) {
-        ;
-    }
     
     //The algorithms from uni
    public static void BubbleSort(Comparable[] arr)
