@@ -3,6 +3,7 @@ package Algorithms_The_Book;
 public class Doubly_Linked_List<Item> {
 
     private Node m_head;
+    private Node tail;
 
     private int m_current_items_number = 0;
 
