@@ -2,8 +2,7 @@ package Algorithms_The_Book;
 
 public class Sorting_Algorithms {
 
-
-    //Templates for sort algorithms
+    // Templates for sort algorithms
     private static boolean less(Comparable value1, Comparable value2)
     { return value1.compareTo(value2) < 0; }
 
@@ -23,11 +22,7 @@ public class Sorting_Algorithms {
         System.out.println();
     }
     
-    //The algorithms from uni
-    public static void insertionSort(Comparable[] arr) {
-        ;
-    }
-    
+    // The algorithms from uni
    public static void BubbleSort(Comparable[] arr)
    {
        int i = arr.length - 1;
