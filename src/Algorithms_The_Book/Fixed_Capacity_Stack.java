@@ -4,6 +4,7 @@ public class Fixed_Capacity_Stack {
 
     private Comparable arr[];
     private int m_size = 0;
+    private int number;
 
     public Fixed_Capacity_Stack(int size)
     { arr = new Comparable[size]; }
