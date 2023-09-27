@@ -9,6 +9,7 @@ public class MinIndexPQ<Key extends Comparable<Key>> implements Iterable<Integer
     private int[] pq;        // binary heap using 1-based indexing
     private int[] qp;        // inverse of pq - qp[pq[i]] = pq[qp[i]] = i
     private Key[] keys;      // keys[i] = priority of i
+    private int currentN;
 
     /**
      * Initializes an empty indexed priority queue with indices between {@code 0}
