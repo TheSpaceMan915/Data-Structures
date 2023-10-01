@@ -4,7 +4,8 @@ public class MaxBinaryHeap {
     //finish HeapSort
 
     private Comparable[] m_arr;
-    private int m_size = 0;
+    private int m_size;
+    private int currentNumber;
 
     public MaxBinaryHeap(int size)
     { m_arr = new Comparable[size + 1]; }
