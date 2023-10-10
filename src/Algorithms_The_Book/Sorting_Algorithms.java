@@ -21,10 +21,6 @@ public class Sorting_Algorithms {
         }
         System.out.println();
     }
-
-    public static void InsertionSort(Comparable[] arr) {
-        
-    }
     
     // The algorithms from uni
    public static void BubbleSort(Comparable[] arr)
