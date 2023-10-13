@@ -3,7 +3,8 @@ package Algorithms_The_Book;
 public class Linked_Stack {
 
     private Node m_first;
-    private int m_size = 0;
+    private int m_size;
+    private Node current;
 
     private class Node {
        private Comparable item;
