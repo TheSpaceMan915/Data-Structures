@@ -4,6 +4,7 @@ public class Linked_Queue {
 
     private Node first;
     private Node last;
+    private int size;
 
     private class Node {
         private Comparable item;
