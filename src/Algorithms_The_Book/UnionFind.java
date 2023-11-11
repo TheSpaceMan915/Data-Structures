@@ -4,8 +4,7 @@ package Algorithms_The_Book;
 public class UnionFind {
 
     private int[] m_arr_id;
-    private int numberConnected;
-
+    
     public UnionFind(int size)
     {
         m_arr_id = new int[size];
