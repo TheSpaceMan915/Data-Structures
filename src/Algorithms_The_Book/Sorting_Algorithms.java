@@ -86,10 +86,6 @@ public class Sorting_Algorithms {
        return arr;
    }
 
-    public void shellSort(Comparable[] arr) {
-        ;
-    }
-
    //It is not working properly
    /*public static void QuickSort(int[] arr) {QuickSortHelper(arr,0,arr.length - 1);}
 
