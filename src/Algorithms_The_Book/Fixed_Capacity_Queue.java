@@ -6,6 +6,7 @@ public class Fixed_Capacity_Queue {
     private int m_size;
     private int m_head;
     private int m_tail;
+    private Comparable lastAdded;
 
     public Fixed_Capacity_Queue(int size)
     {
