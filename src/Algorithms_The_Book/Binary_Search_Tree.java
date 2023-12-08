@@ -3,6 +3,7 @@ package Algorithms_The_Book;
 public class Binary_Search_Tree<Key extends Comparable<Key>,Item> {
 
     private Node m_root;
+    private int level;
     
     private class Node
     {
