@@ -4,6 +4,7 @@ public class Doubly_Linked_List<Item> {
 
     private Node m_head;
     private int m_current_items_number;
+    private Node tail;
 
     public class Node
     {
