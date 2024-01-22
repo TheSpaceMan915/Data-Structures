@@ -5,7 +5,6 @@ public class MaxBinaryHeap {
 
     private Comparable[] m_arr;
     private int m_size;
-    private Comparable lastInserted;
 
     public MaxBinaryHeap(int size)
     { m_arr = new Comparable[size + 1]; }
